@@ -18,6 +18,12 @@
           <a class="black-color no-text-decoration" title="{{ $post->user->name }}" href="/users/{{ $post->user->id }}">
             <strong>{{ $post->user->name }}</strong>
           </a>
+        @if ($post->user->id == Auth::user()->id)
+          	<a class="ml-auto mx-0 my-auto" rel="nofollow" href="/postsdelete/{{ $post->id }}">
+              <div class="delete-post-icon">
+              </div>
+          	</a>
+          @endif
         </div>
 
         <a href="/users/{{ $post->user->id }}">
