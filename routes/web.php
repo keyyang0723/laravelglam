@@ -14,6 +14,11 @@
 Route::get('/', 'PostsController@index');
 
 Auth::routes();
+
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/users/edit', 'UsersController@edit');
+
+Route::post('/users/update', 'UsersController@update');
 
 Route::get('/users/{user_id}', 'UsersController@show');
