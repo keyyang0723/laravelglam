@@ -34,3 +34,7 @@ Route::get('/postsdelete/{post_id}', 'PostsController@destroy');
 Route::get('/posts/{post_id}/likes', 'LikesController@store');
 
 Route::get('/likes/{like_id}', 'LikesController@destroy');
+
+Route::post('/posts/{comment_id}/comments', 'CommentsController@store');
+
+Route::get('/comments/{comment_id}', 'CommentsController@destroy');
